@@ -1,0 +1,451 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--midnight);
+}
+
+.App {
+  text-align: center;
+  background-color: var(--midnight);
+}
+
+:root {
+  --white: #fdfff7;
+  --gray: #ffc107;
+  --lightcolor: #9c27b0;
+  --color: #6a1b9a;
+  --darkcolor: #29339b;
+
+  --lavander: #4f527d;
+  --midnight: #1a223f;
+  --pink: #b87d97;
+  --yellow: #eadf95;
+  --dark: #0b0814;
+
+  --xsfont: 11.12px;
+  --sfont: 18px;
+  --mfont: 29.12px;
+  --lfont: 47.12px;
+  --xlfont: 76.24px;
+  --xxlfont: 123.36px;
+}
+
+.page-title {
+  color: white;
+  margin-top: 3vh;
+}
+
+.navbar {
+  background-color: var(--pink) !important;
+  font-size: var(--mfont);
+}
+
+.nav-link,
+.navbar-brand {
+  color: var(--midnight);
+  font-size: var(--mfont);
+}
+
+/* Home Page*/
+.home-container {
+  background-color: var(--midnight);
+  width: 100vw;
+  height: 100vh;
+}
+
+.home-page-text {
+  color: white;
+}
+
+/* Artists card stylization */
+
+.artist-card-headers {
+  color: var(--white);
+}
+
+.artist-card {
+  background-color: var(--lavander);
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  flex: 1 1 600px;
+  min-height: 600px;
+  max-height: 600px;
+}
+
+.artist-card img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: -5px 5px 5px var(--midnight);
+}
+
+.artist-card-body {
+  min-height: 30%;
+  max-height: 30%;
+  /* background: #eadf95; */
+}
+
+.artist-card-title {
+  font-size: var(--mfont);
+  font-weight: 700;
+  color: var(--white);
+}
+
+.artist-card-container {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.artist-card-subtitle {
+  font-size: var(--mfont);
+  font-weight: 600;
+  color: var(--pink);
+}
+.artist-card-text {
+  text-align: center;
+  font-size: var(--sfont);
+  font-weight: 600;
+  color: white;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.artist-card-genre {
+  color: white;
+}
+
+.artist-card-link {
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(to right, var(--lavander), var(--pink));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, color 0.4s ease, padding-left 0.4s ease,
+    color 0.8s ease;
+  padding: 5px 15px 5px 0px;
+}
+
+.artist-card-link:hover {
+  background-size: 100% 100%;
+  color: white;
+  padding-left: 20px;
+}
+
+/* Artists page stylization */
+
+.artist-page {
+  padding-bottom: 30vh;
+  padding-left: 40vh;
+}
+
+.artist-page-title {
+  font-size: var(--xlfont);
+  color: white;
+}
+
+.artist-page-subtitle {
+  font-size: var(--lfont);
+  background: linear-gradient(to right, var(--lavander), var(--pink));
+  background-clip: text;
+  color: white;
+}
+
+.artist-page-text {
+  font-size: var(--mfont);
+  color: white;
+}
+
+.artist-page-smalltext {
+  font-size: var(--sfont);
+}
+
+.artist-page-albums {
+  width: 50vw;
+  margin-bottom: 40px;
+}
+
+.artist-page-album {
+  height: 200px;
+  width: auto;
+  aspect-ratio: 1;
+}
+
+.artist-page a {
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(to right, var(--lavander), var(--pink));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, padding-left 0.4s ease, color 0.8s ease;
+  padding: 5px 15px 5px 0px;
+}
+
+.artist-page a:hover {
+  background-size: 100% 100%;
+  color: white;
+  padding-left: 20px;
+}
+
+/* Genre card Stylization */
+
+.genre-card-container {
+  margin-top: 100px;
+}
+.genre-card {
+  background-color: var(--lavander);
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin-bottom: 50px;
+}
+.genre-card-title {
+  font-size: var(--xlfont);
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(to right, var(--lavander), var(--pink));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, padding-left 0.4s ease-in,
+    color 0.8s ease;
+  padding: 5px 50px 5px 0px;
+}
+
+.genre-card-title:hover {
+  background-size: 100% 100%;
+  color: white;
+  padding-left: 60px;
+}
+
+.genre-card-subtitle {
+  font-size: var(--lfont);
+  background: linear-gradient(to top, var(--color), var(--lightcolor));
+  background-clip: text;
+  color: white;
+}
+
+.genre-card-songs {
+  font-size: var(--sfont);
+  color: white;
+}
+
+.genre-card-link {
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(to right, var(--lavander), var(--pink));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, padding-left 0.4s ease, color 0.8s ease;
+  padding: 5px 15px 5px 0px;
+}
+
+.genre-card-link:hover {
+  background-size: 100% 100%;
+  color: white;
+  padding-left: 40px;
+}
+
+/* Genre page stylization */
+
+.genre-page {
+  margin-bottom: 20vh;
+}
+
+.genre-page-con {
+  width: 30vw;
+  height: 90vh;
+  border: 5px solid;
+  border-color: var(--pink);
+  margin-right: 10px;
+}
+
+.genre-page-title {
+  margin-top: 2vh;
+  font-size: var(--xlfont);
+  color: white;
+  font-weight: 600;
+}
+
+.genre-page-subtitle {
+  font-size: var(--lfont);
+  color: var(--pink);
+}
+
+.genre-info-con {
+  margin-top: 3vh;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.genre-page-text {
+  font-size: var(--mfont);
+  color: white;
+}
+
+.genre-page-price {
+  font-size: var(--sfont);
+  padding-left: 5px;
+  color: var(--pink);
+  padding-bottom: 0;
+}
+
+.genre-page-venue {
+  background-color: var(--midnight);
+}
+
+.genre-page-link {
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(to top, var(--lavander), var(--pink));
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, color 0.8s ease;
+  padding: 5px 10px 5px 10px;
+}
+
+.genre-page-link:hover {
+  background-size: 100% 100%;
+  color: white;
+}
+
+/* about page stylization */
+
+.about-fixed-height-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.about-custom-col {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.about-colors {
+  background-color: var(--lavander);
+  color: white;
+}
+
+.about-fixed-body {
+  height: auto;
+  flex-grow: 1;
+}
+
+.about-fixed-height {
+  min-height: 560px;
+}
+
+.about-custom-col {
+  max-width: 60%;
+}
+
+.about-fixed-height-group {
+  min-height: 800px;
+}
+
+.about-tool-photo {
+  max-height: 120px;
+  min-width: 120px;
+  aspect-ratio: 1;
+  width: auto;
+}
+
+.about-bio {
+  min-height: 230px;
+}
+
+/* event stylization */
+
+.event-box {
+  display: inline-block;
+  padding: 10px;
+  background-color: var(--lavander);
+  border-radius: 20%;
+  color: white;
+}
+
+.event-card {
+  background-color: var(--lavander);
+  color: white;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-name {
+  color: white;
+  text-decoration: none;
+}
+
+.event-instance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.event-instance-image {
+  width: 30vh;
+  height: 30vh;
+  border: 0.2em solid;
+  border-radius: 5;
+  border-color: var(--pink);
+  margin-bottom: 2vh;
+}
+
+.event-address {
+  color: white;
+}
+
+.event-card-link {
+  color: white;
+}
+
+.event-instance-text {
+  color: white;
+}
+
+/* Search bar stylization */
+
+.link-container a {
+  margin-right: 10px;
+}
+
+.drop-down-button {
+  background-color: var(--pink);
+}
+
+.drop-down-button:hover {
+  background-color: var(--lavander);
+}
+
+.horizontal-slider {
+  width: 100%;
+  height: 30px;
+}
+
+.thumb {
+  width: 10px;
+  height: 10px;
+  background-color: var(--darkcolor);
+  border-radius: 50%;
+}
+
+.track {
+  border-radius: 2px;
+  height: 4px;
+  background-color: var(--pink);
+}
+
+/* pagination */
+
+.page-buttonm {
+  background-color: var(--pink);
+  color: white;
+  padding: 5px;
+}
